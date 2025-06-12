@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Your CV</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .cv-form-container {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 800px;
+      width: 100%;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      color: #4e54c8;
+    }
+
+    .form-control:focus {
+      box-shadow: 0 0 0 0.2rem rgba(78, 84, 200, 0.25);
+      border-color: #4e54c8;
+    }
+
+    button {
+      background-color: #4e54c8;
+      border: none;
+    }
+
+    button:hover {
+      background-color: #3a3fc1;
+    }
+  </style>
+</head>
+<body>
+  <div class="cv-form-container">
+    <h2 class="mb-4 text-center">Create Your CV</h2>
+    <form method="POST">
+      <!-- Full Name -->
+      <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" class="form-control" name="name" required />
+      </div>
+
+      <!-- Email -->
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" name="email" required placeholder="Enter your email" />
+      </div>
+
+      <!-- Phone -->
+      <div class="mb-3">
+        <label class="form-label">Phone</label>
+        <input type="tel" class="form-control" name="phone" required placeholder="Enter your phone number" />
+      </div>
+
+      <!-- Titles -->
+      <div class="mb-3">
+        <label class="form-label">Title</label>
+        <input type="text" class="form-control mb-2" name="title1" required placeholder="e.g. Python Programmer" />
+        <input type="text" class="form-control mb-2" name="title2" placeholder="Other title (optional)" />
+        <input type="text" class="form-control" name="title3" placeholder="Other title (optional)" />
+      </div>
+
+      <!-- Location -->
+      <div class="mb-3">
+        <label class="form-label">Location</label>
+        <input type="text" class="form-control" name="location" required />
+      </div>
+
+      <!-- Profile -->
+      <div class="mb-3">
+        <label class="form-label">Profile</label>
+        <textarea class="form-control" name="profile" rows="3" placeholder="Summary about yourself..." required></textarea>
+      </div>
+
+      <!-- Education -->
+      <div class="mb-3">
+        <label class="form-label">Education</label>
+        <input type="text" class="form-control mb-2" name="education" required placeholder="e.g. BSc in Computer Science" />
+        <input type="text" class="form-control" name="education2" placeholder="Other qualification (optional)" />
+      </div>
+
+      <!-- Certificates -->
+      <div class="mb-3">
+        <label class="form-label">Certificates</label>
+        <input type="text" class="form-control mb-2" name="certificate1" placeholder="e.g. Udemy: Python Programming" />
+        <input type="text" class="form-control" name="certificate2" placeholder="Additional certificate (optional)" />
+      </div>
+
+      <!-- Experience 1 -->
+      <div class="mb-3">
+        <label class="form-label">Experience 1</label>
+        <input type="text" class="form-control mb-2" name="position1" required placeholder="Position (e.g. IT Intern)" />
+        <input type="text" class="form-control mb-2" name="institution1" required placeholder="Institution" />
+        <div class="row g-2 mb-2">
+          <div class="col">
+            <input type="date" class="form-control" name="duration_beg1" required />
+          </div>
+          <div class="col">
+            <input type="date" class="form-control" name="duration_end1" required />
+          </div>
+        </div>
+        <textarea class="form-control" name="workdone1" rows="2" required placeholder="What you did..."></textarea>
+      </div>
+
+      <!-- Experience 2 -->
+      <div class="mb-3">
+        <label class="form-label">Experience 2</label>
+        <input type="text" class="form-control mb-2" name="position2" placeholder="Position (e.g. IT Intern)" />
+        <input type="text" class="form-control mb-2" name="institution2" placeholder="Institution" />
+        <div class="row g-2 mb-2">
+          <div class="col">
+            <input type="date" class="form-control" name="duration_beg2" />
+          </div>
+          <div class="col">
+            <input type="date" class="form-control" name="duration_end2" />
+          </div>
+        </div>
+        <textarea class="form-control" name="workdone2" rows="2" placeholder="What you did..."></textarea>
+      </div>
+
+      <!-- Skills -->
+      <div class="mb-3">
+        <label class="form-label">Languages & Skills</label>
+        <input type="text" class="form-control mb-2" name="language1" required placeholder="Language 1" />
+        <input type="text" class="form-control mb-2" name="language2" placeholder="Language 2" />
+        <input type="text" class="form-control mb-2" name="skill1" required placeholder="Skill 1 (e.g. Python)" />
+        <input type="text" class="form-control" name="skill2" placeholder="Skill 2 (e.g. PHP)" />
+      </div>
+
+      <!-- Submit Button -->
+      <div class="text-center mt-4">
+        <button type="submit" class="btn btn-primary px-4 py-2">Generate CV</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
